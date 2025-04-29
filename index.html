@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cliques</title>
+</head>
+<body>
+
+    <h2>Contador de Cliques com Reset</h2>
+    <h3>Isso é pra perder tempo</h3>
+
+    <div id ="contador">0</div>
+    <Button id="botaoContar">Aperta essa Bagaça</Button>
+    <button id="botaoResetar">Resetar essa Bagaça</button>
+
+    <script>
+        var contador = 0
+
+        const exibirContador = document.getElementById("contador")
+        const botaoContar = document.getElementById("botaoContar")
+        const botaoResetar = document.getElementById("botaoResetar")
+        
+        function atualizarDisplay() {
+            exibirContador.textContent = contador
+        }
+
+        function contarCliques() {
+            contador++
+            atualizarDisplay()
+        }
+
+        function resetarDisplay() {
+            contador = 0
+            atualizarDisplay()
+        }
+        
+        botaoContar.addEventListener("click", contarCliques)
+        botaoResetar.addEventListener("click", resetarDisplay)
+    </script>
+
+</body>
+</html>
+
+
+<!-- solicitação 1 ao chat gpt <preciso aprender a fazer um contador de cliques com reset usando html e Javascript, não me mostre como fazer. me explique o que preciso fazer, quais funções, botões, etc...> -->
+<!-- solicitação 2 ao chat gpt <agora me mostre como o código deve ficar> -->
+<!-- solicitação 3 ao chat gpt <me explique o que cada linha faz no código> -->

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulando seu login</title>
+</head>
+<body>
+    <h2>Simule seu login</h2>
+
+    <input type ="text" id ="usuario" placeholder ="Digite seu nome de usuário">
+    <input type ="password" id ="senha" placeholder ="Digite sua senha">
+
+    <button id ="botaoLogin">Fazer Login</button>
+
+    <div id="mensagemResultado"></div>
+    <script>
+        const usuarioCorreto = "Alex" //Criei um usuário fixo para facilitar
+        const senhaCorreta = "280109" //Criei uma senha fixa para facilitar
+
+        const inputUsuario = document.getElementById("usuario")
+        const inputSenha = document.getElementById("senha")
+        const divResultado = document.getElementById("mensagemResultado")
+        const botaoLogin = document.getElementById("botaoLogin")
+
+        function verificarLogin() {
+            const usuario = inputUsuario.value.trim()
+            const senha = inputSenha.value.trim()
+
+            if (usuario === usuarioCorreto && senha === senhaCorreta) {
+                divResultado.textContent = "Login realizado com sucesso!"
+                divResultado.style.color = "green"
+            } else {
+                divResultado.textContent = "Usuário ou senha incorretos!"
+                divResultado.style.color = "red"
+            }
+        }
+
+        botaoLogin.addEventListener("click", verificarLogin);
+    </script>
+</body>
+</html>
+
+<!-- solicitação 1 ao chat gpt <quero aprender a fazer um simulador de login em html e JavaScript, para que eu possa verificar um login. quero que possua um input com o usuário, um input com a senha, um botão para login e uma div que mostra o resultado, login realizado ou não> -->
+<!-- solicitação 2 ao chat gpt <me explique cada linha> -->
